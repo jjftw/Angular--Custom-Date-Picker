@@ -4,11 +4,11 @@ var _ = require('lodash'),
     path = require('path'),
     plugins = require('gulp-load-plugins')(),
     using = require('gulp-using');
+    embedTemplates = require('gulp-angular-embed-templates'); //Jim added
 
 var buildProperties = {
     buildDirectory: './build'
 };
-
 
 
 //Dynamically load all of the task definitions in ./gulp-tasks/*.js

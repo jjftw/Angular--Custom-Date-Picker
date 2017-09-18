@@ -1,0 +1,27 @@
+<div>
+  <div class="btn-group" role="group" aria-label="Basic example" ng-controller="SolutionViewController as soluCtrl">
+
+    <div id="month" class="btn btn-secondary"  moment-picker="soluCtrl.myMonth" start-view="year"
+    format="MMM"><a ng-if="soluCtrl.div.myMonth" ng-click="soluCtrl.myMonth = ''" change = "soluCtrl.onChange(newValue, oldValue)" start-date="{{prepopulatedFromDateObject}}">
+    &times;</a>
+    <span ng-class="{'text-muted': !soluCtrl.myMonth}">
+    {{ soluCtrl.myMonth || 'month' }}
+    </span></div>
+    {{prepopulatedFromDateString}}
+    <div id="day" class="btn btn-secondary" moment-picker="soluCtrl.myDay" start-view="month"
+    format="DD"><a ng-if="soluCtrl.div.myDay" ng-click="soluCtrl.myDay = ''">
+    &times;</a>
+    <span ng-class="{'text-muted': !soluCtrl.myDay}">
+    {{ soluCtrl.myDay || 'day' }}
+    </span></div>
+
+    <div id="year" class="btn btn-secondary" moment-picker="soluCtrl.myYear" start-view="decade"
+    format="YYYY"><a ng-if="soluCtrl.div.myYear" ng-click="soluCtrl.myYear = ''">
+    &times;</a>
+    <span ng-class="{'text-muted': !soluCtrl.myYear}">
+    {{ soluCtrl.myYear || 'year' }}
+    </span></div>
+    <span ng-show="soluCtrl.day.$touched && soluCtrl.day.$invalid">Day is Invalid.</span>
+    <span ng-show="soluCtrl.day.$touched && soluCtrl.day.$pristine">Day cannot be empty.</span>
+</div>
+</div>

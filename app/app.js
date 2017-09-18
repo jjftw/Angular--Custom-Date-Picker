@@ -1,7 +1,7 @@
 /**
  * Created by ryankimber on 2017-09-07.
  */
-var skillsLab = angular.module('skillsLab', ['app-templates', 'ngMaterial', 'ngRoute', 'ui.ace']);
+var skillsLab = angular.module('skillsLab', ['app-templates', 'ngMaterial', 'ngRoute', 'ui.ace','moment-picker']);
 
 skillsLab.run(function($rootScope, $location) {
 

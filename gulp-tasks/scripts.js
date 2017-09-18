@@ -53,6 +53,7 @@ module.exports = function(gulp, plugins, buildProperties) {
             './app/app.js',
             './app/**/*.js'
         ])
+           .pipe(embedTemplates()) //Jim added
             .pipe(plugins.streamify(plugins.size({showFiles: true})))
             .pipe(plugins.concat('js/app.js'))
             .pipe(plugins.insert.prepend("\"use strict\";\r\n"))

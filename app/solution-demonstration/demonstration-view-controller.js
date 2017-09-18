@@ -35,4 +35,16 @@ angular.module('skillsLab').controller("DemonstrationViewController", function($
     aceLoaded: _aceLoaded
   })
 
+})
+
+.directive('fhDateInput', function() {
+  return {
+    restrict:'A',
+    scope:{
+      prepopulatedFromDateObject:'=',
+      prepopulatedFromDateString:'='
+    },
+    templateUrl: '../fh-date-input/fh-date-input.tpl.html',
+    replace:true
+  };
 });
